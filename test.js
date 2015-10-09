@@ -1,4 +1,13 @@
 module.exports = function(context, req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end(context.data.name || 'Anonymous');
+  var theGoods = {
+    "frames": [
+      {
+        "index": 0,
+        "text": "spooky",
+        "icon": "a77"
+      }
+    ]
+  }
+  res.writeHead(200, { 'Content-Type': 'application/javascript' });
+  res.end(theGoods);
 }
